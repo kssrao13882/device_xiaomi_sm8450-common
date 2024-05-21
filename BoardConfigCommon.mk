@@ -115,7 +115,7 @@ BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.KERNEL_MODULE_DIRS := top
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    mtdoops.fingerprint=$(LINEAGE_VERSION)
+    mtdoops.fingerprint=$(INFINITY_VERSION)
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
@@ -188,7 +188,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
-ifneq ($(WITH_GMS),true)
+ifneq ($(WITH_GAPPS),true)
 BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT ?= -1
 ifeq ($(BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE),true)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 1188036608
